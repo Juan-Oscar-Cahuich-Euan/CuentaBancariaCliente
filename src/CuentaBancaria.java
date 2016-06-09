@@ -6,18 +6,18 @@ public class CuentaBancaria {
     private double saldo;
     
     public CuentaBancaria (int numeroDeCuenta, Cliente cliente){
-        this.cliente = cliente;
+        this.cliente =  new Cliente(cliente.getNombre(), cliente.getApellido());;
         this.numeroDeCuenta = numeroDeCuenta;
         this.saldo =0.0;
     }
-    private void numeroDeCuenta(int numeroDeCuenta){
+    public void numeroDeCuenta(int numeroDeCuenta){
         this.numeroDeCuenta = numeroDeCuenta;
     }
     
-    private void cliente(String nombre, String apellido){
-        this.cliente = cliente;
-        
-    }
+//    private void cliente(String nombre, String apellido){
+//        this.cliente = cliente;
+//        
+//    }
     
     public void Depositar(double cantidad){
         if (this.puedeDepositar(cantidad)){
@@ -56,14 +56,19 @@ public class CuentaBancaria {
     public double getSaldo(){
         return this.saldo;}
         
-          public Cliente getcliente(){
-        return this.cliente;}
+//          public Cliente getcliente(){
+//        return this.cliente;}
         
         public int getnumeroDeCuenta(){
         return this.numeroDeCuenta;
         }
+
+    int getNumeroDeCuenta() {
+         return this.getNumeroDeCuenta();
+    }
  
-          }
-    
+}
+        
+        
 
 
